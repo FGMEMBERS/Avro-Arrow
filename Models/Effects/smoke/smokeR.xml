@@ -1,40 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <particlesystem>
     <name>smoke</name>
     <texture>noise3.png</texture>
-
+    
     <emissive>false</emissive>
     <lighting>true</lighting>
-
+    
     <condition>
       <and>
         <greater-than>
-          <property>/engines/engine[1]/n2</property>
+          <!-- /engines/engine[1]/n2 -->
+          <property>sim/multiplay/generic/float[7]</property>
           <value>75</value>
         </greater-than>
         <less-than>
-          <property>/position/altitude-ft</property>
+          <!-- /position/altitude-ft -->
+          <property>sim/multiplay/generic/float[3]</property>
           <value>3000</value>
         </less-than>
       </and>
     </condition>
-
+    
     <attach>world</attach>
-
+    
     <placer>
       <type>point</type>
     </placer>
-
+    
     <shooter>
       <theta-min-deg>84</theta-min-deg>
       <theta-max-deg>86</theta-max-deg>
       <phi-min-deg>-1.5</phi-min-deg>
       <phi-max-deg>1.5</phi-max-deg>
       <speed-mps>
-        <property>engines/engine/n1</property>
+        <!-- /engines/engine[1]/n1 -->
+        <property>sim/multiplay/generic/float[6]</property>
         <factor>5</factor>
       </speed-mps>
       <rotation-speed>
@@ -46,17 +49,18 @@
         <z-max-deg-sec>0</z-max-deg-sec>
       </rotation-speed>
     </shooter>
-
+    
     <counter>
       <particles-per-sec>
-        <property>engines/engine/n1</property>
+        <!-- /engines/engine[1]/n1 -->
+        <property>sim/multiplay/generic/float[6]</property>
         <factor>1</factor>
         <spread>20</spread>
       </particles-per-sec>
     </counter>
-
+    
     <align>billboard</align>
-
+    
     <particle>
       <start>
         <color>
@@ -69,7 +73,7 @@
           <value>0.75</value>
         </size>
       </start>
-
+      
       <end>
         <color>
           <red><value>   0.9500 </value></red>
@@ -81,21 +85,21 @@
           <value>7.5</value>
         </size>
       </end>
-
+      
       <life-sec>
         <value>5.0</value>
       </life-sec>
-
+      
       <mass-kg>0.05</mass-kg>
       <radius-m>0.3</radius-m>
     </particle>
-
+    
     <program>
       <fluid>   air  </fluid>
       <gravity> true </gravity>
       <wind>    true </wind>
     </program>
-
+    
   </particlesystem>
-
+  
 </PropertyList>

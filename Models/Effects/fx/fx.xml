@@ -1,14 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <path>effect.ac</path>
-
+  
+  <animation>
+    <object-name>ShockWave</object-name>
+  </animation>
+  
+  <effect>
+    <inherits-from>Aircraft/Avro-Arrow/Models/Effects/Glass/glass</inherits-from>
+    <object-name>ShockWave</object-name>
+  </effect>
+  
   <!-- ******************************************************************* -->
   <!-- Condensation                                                        -->
   <!-- ******************************************************************* -->
-	<!-- shock waves -->
-	<animation>
+  <!-- shock waves -->
+  <animation>
     <type>select</type>
     <object-name>ShockWave</object-name>
     <condition>
@@ -31,7 +40,6 @@
         </less-than>
       </and>
     </condition>
- </animation>
-
+  </animation>
+  
 </PropertyList>
-

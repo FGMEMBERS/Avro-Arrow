@@ -1,14 +1,21 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <path>flash.ac</path>
 
   <animation>
-    <type>noshadow</type>
+    <!-- Objets opaques -->
+    
+    <!-- Objets transparents -->
     <object-name>flash</object-name>
   </animation>
-
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>flash</object-name>
+  </effect>
+  
   <animation>
     <type>alpha-test</type>
     <alpha-factor>0.01</alpha-factor>
@@ -24,10 +31,9 @@
     <type>material</type>
     <object-name>flash</object-name>
     <emission>
-      <red>   1 </red>
-      <green> 1 </green>
-      <blue>  1 </blue>
-      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   2 </red>
+      <green> 2 </green>
+      <blue>  2 </blue>
     </emission>
   </animation>
 
@@ -50,4 +56,3 @@
   </animation>
 
 </PropertyList>
-

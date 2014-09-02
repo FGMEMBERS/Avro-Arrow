@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- <PropertyList include="arrow-jsbsim-cnf.xml"> -->
-<PropertyList include="arrow-yasim-cnf.xml">
+<PropertyList include="arrow-base.xml">
 
   <sim>
 
-    <description>Avro CF105 Arrow</description>
+    <description>Avro CF 105 Arrow (YASim)</description>
     <author>BARANGER Emmanuel (3D/FDM), StuartC (FDM/Panel), N-SCOT ( Liveries )</author>
-
+    <flight-model>yasim</flight-model>
+    <aero>arrow-yasim</aero>
+    
     <rating>
       <FDM type="int">     2 </FDM>
       <systems type="int"> 2 </systems>
@@ -18,4 +19,3 @@
   </sim>
 
 </PropertyList>
-

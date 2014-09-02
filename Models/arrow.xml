@@ -13,9 +13,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -116,35 +116,11 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
-    <specular>
-      <red-prop>specular/red</red-prop>
-      <green-prop>specular/green</green-prop>
-      <blue-prop>specular/blue</blue-prop>
-    </specular>
-
     <emission>
       <red-prop>emission/red</red-prop>
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <!-- Bump Map Effect
@@ -173,6 +149,7 @@
     <object-name>spoilerD</object-name>
   </effect>
   -->
+  
   <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
     <object-name>fuselage</object-name>
@@ -201,26 +178,15 @@
     <object-name>spoilerD</object-name>
   </effect>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  <effect>
+    <inherits-from>Aircraft/Avro-Arrow/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitres</object-name>
     <object-name>vitreAG</object-name>
     <object-name>vitreAD</object-name>
     <object-name>vitreBG</object-name>
     <object-name>vitreBD</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitres</object-name>
-    <object-name>vitreAG</object-name>
-    <object-name>vitreAD</object-name>
-    <object-name>vitreBG</object-name>
-    <object-name>vitreBD</object-name>
-  </animation>
- 
+  </effect>
+  
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/Avro-Arrow/Models/shadow.xml</path>
@@ -233,13 +199,19 @@
 
   <!-- Interieur -->
   <model>
+    <name>Interieur</name>
     <path>Aircraft/Avro-Arrow/Models/Interior/interior.xml</path>
   </model>
 
+  <animation>
+    <type>noshadow</type>
+    <object-name>Interieur</object-name>
+  </animation>
+  
   <!-- Les flammes -->
   <!-- Gauche -->
   <model>
-    <path>Aircraft/Avro-Arrow/Models/Effects/flammes/flammesG.xml</path>
+    <path>Aircraft/Avro-Arrow/Models/Effects/flammes/combustionL.xml</path>
     <offsets>
       <x-m> 10.349 </x-m>
       <y-m> -0.738 </y-m>
@@ -249,7 +221,7 @@
 
   <!-- Droite -->
   <model>
-    <path>Aircraft/Avro-Arrow/Models/Effects/flammes/flammesD.xml</path>
+    <path>Aircraft/Avro-Arrow/Models/Effects/flammes/combustionR.xml</path>
     <offsets>
       <x-m> 10.349 </x-m>
       <y-m>  0.738 </y-m>
@@ -910,12 +882,26 @@
   </animation>
 
   <animation>
+    <type>pick</type>
+    <object-name>AvantGauche</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>rotate</type>
     <object-name>AvantGauche</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
-      <entry><ind> 1 </ind><dep> 80 </dep></entry>
+      <entry><ind> 1 </ind><dep> 45 </dep></entry>
     </interpolation>
     <axis>
       <x1-m> -5.536 </x1-m>
@@ -934,12 +920,26 @@
   </animation>
 
   <animation>
+    <type>pick</type>
+    <object-name>AvantDroite</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>rotate</type>
     <object-name>AvantDroite</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>   0 </dep></entry>
-      <entry><ind> 1 </ind><dep> -80 </dep></entry>
+      <entry><ind> 1 </ind><dep> -45 </dep></entry>
     </interpolation>
     <axis>
       <x1-m> -5.536 </x1-m>
@@ -958,12 +958,26 @@
   </animation>
 
   <animation>
+    <type>pick</type>
+    <object-name>ArriereGauche</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>rotate</type>
     <object-name>ArriereGauche</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
-      <entry><ind> 1 </ind><dep> 80 </dep></entry>
+      <entry><ind> 1 </ind><dep> 45 </dep></entry>
     </interpolation>
     <axis>
       <x1-m> -4.660 </x1-m>
@@ -982,12 +996,26 @@
   </animation>
 
   <animation>
+    <type>pick</type>
+    <object-name>ArriereDroite</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>rotate</type>
     <object-name>ArriereDroite</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>   0 </dep></entry>
-      <entry><ind> 1 </ind><dep> -80 </dep></entry>
+      <entry><ind> 1 </ind><dep> -45 </dep></entry>
     </interpolation>
     <axis>
       <x1-m> -4.660 </x1-m>
@@ -1000,33 +1028,22 @@
   </animation>
   
   <!-- special FX -->
-    <model>
-		<path>Aircraft/Avro-Arrow/Models/Effects/fx/fx.xml</path>
-		<offsets>
-			<x-m> 0.00 </x-m>
-			<y-m> 0.00 </y-m>
-			<z-m> 0.28 </z-m>
-		</offsets>
-	</model>
-	
-	<model>
-		<path>Aircraft/Avro-Arrow/Models/Effects/fx/fx2.xml</path>
-		<offsets>
-			<x-m> 0 </x-m>
-			<y-m> 0 </y-m>
-			<z-m> 0 </z-m>
-			<pitch-deg> 0 </pitch-deg>
-		</offsets>
-	</model> 
-
-	<model>
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Effects/fx/fx.xml</path>
+  </model>
+  
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Effects/fx/fx2.xml</path>
+  </model> 
+  
+  <model>
     <name>aircraft_wash_l</name>
     <path>Aircraft/Avro-Arrow/Models/Effects/wash/aircraft_wash.xml</path>
     <condition>
-    <equals>
-    <property>controls/state/low_level</property>
-    <value>1</value>
-    </equals>
+      <equals>
+        <property>controls/state/low_level</property>
+        <value>1</value>
+      </equals>
     </condition>
     <offsets>
       <x-m> 25.00 </x-m>
@@ -1034,7 +1051,7 @@
       <z-m>  0.00 </z-m>
     </offsets>
   </model>
- 
+  
   <model>
     <name>aircraft_wash_r</name>
     <path>Aircraft/Avro-Arrow/Models/Effects/wash/aircraft_wash.xml</path>
@@ -1102,6 +1119,15 @@
   </model>
 
   <model>
+    <path>Aircraft/Avro-Arrow/Models/lights/StrobeLight.xml</path>
+    <offsets>
+      <x-m>  8.400 </x-m>
+      <y-m> -7.500 </y-m>
+      <z-m> -0.243 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
     <path>Aircraft/Avro-Arrow/Models/lights/GreenLight.xml</path>
     <offsets>
       <x-m>  8.000 </x-m>
@@ -1111,16 +1137,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Avro-Arrow/Models/lights/StrobeWhite.xml</path>
-    <offsets>
-      <x-m>  8.400 </x-m>
-      <y-m> -7.500 </y-m>
-      <z-m> -0.243 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Avro-Arrow/Models/lights/StrobeWhite.xml</path>
+    <path>Aircraft/Avro-Arrow/Models/lights/StrobeLight.xml</path>
     <offsets>
       <x-m>  8.400 </x-m>
       <y-m>  7.500 </y-m>
@@ -1202,4 +1219,3 @@
   </animation>   
 	
 </PropertyList>
-

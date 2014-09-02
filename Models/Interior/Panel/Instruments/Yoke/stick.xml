@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>stick.ac</path>
+  
+  <animation> 
+    <object-name>stick-skirt</object-name>
+    <object-name>stick-mast</object-name>
+    <object-name>stick-roll</object-name>
+    
+    <object-name>upper-mast</object-name>
+    <object-name>handle</object-name>
+    <object-name>arm-selector</object-name>
+    <object-name>DLC-button</object-name>
+    <object-name>DLC-wheel</object-name>
+    <object-name>trim-hat</object-name>
+    <object-name>trim-hat.001</object-name>
+    <object-name>arm-index</object-name>
+    <object-name>WPNS-button</object-name>
+  </animation>
+
+  <animation> 
+    <name>stick</name>
+    <object-name>stick-skirt</object-name>
+    <object-name>stick-mast</object-name>
+    <object-name>stick-roll</object-name>
+  </animation>
+
+  <animation> 
+    <name>stick-handle</name>
+    <object-name>upper-mast</object-name>
+    <object-name>handle</object-name>
+    <object-name>arm-selector</object-name>
+    <object-name>DLC-button</object-name>
+    <object-name>DLC-wheel</object-name>
+    <object-name>trim-hat</object-name>
+    <object-name>trim-hat.001</object-name>
+    <object-name>arm-index</object-name>
+    <object-name>WPNS-button</object-name>
+  </animation>
+  
+  <!-- Lighting -->
+  <animation> 
+    <type>material</type>
+    <object-name>stick</object-name>
+    <emission>
+      <factor-prop>controls/lighting/panel-norm</factor-prop>
+      <red>   0.275 </red>
+      <green> 0.120 </green>
+      <blue>  0.050 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>stick-handle</object-name>
+    <object-name>stick-roll</object-name>
+    <object-name>stick-mast</object-name>
+    <property>controls/flight/elevator</property>
+    <factor> 20 </factor>
+    <center>
+      <x-m> 0.0000 </x-m>
+      <y-m> 0.0000 </y-m>
+      <z-m> 0.0153 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>stick-handle</object-name>
+    <object-name>stick-roll</object-name>
+    <property>controls/flight/aileron</property>
+    <factor> 20 </factor>
+    <center>
+      <x-m> 0.0000 </x-m>
+      <y-m> 0.0000 </y-m>
+      <z-m> 0.1895 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>stick-roll</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry><ind>  1 </ind><dep>  20 </dep></entry>
+      <entry><ind>  0 </ind><dep>   0 </dep></entry>
+      <entry><ind> -1 </ind><dep> -20 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.0000 </x-m>
+      <y-m> -0.0536 </y-m>
+      <z-m>  0.1751 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  <!--
+  <animation>
+    <type>rotate</type>
+    <object-name>arm-selector</object-name>
+    <property>sim/model/f-14b/controls/armament/stick-selector</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> 0.0842 </x-m>
+      <y-m> 0.0000 </y-m>
+      <z-m> 0.4402 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  -->
+</PropertyList>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -15,7 +15,7 @@
   
   <!-- sticks and pedals -->
   <model>
-    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/divers/stick.xml</path>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/Yoke/stick.xml</path>
     <offsets>
       <x-m> -0.145 </x-m>
       <y-m>  0.000 </y-m>
@@ -24,7 +24,7 @@
   </model>
   
   <model>
-    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/divers/pedals.xml</path>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/Pedals/pedals.xml</path>
     <offsets>
       <x-m> -0.27 </x-m>
       <y-m>  0.00 </y-m>
@@ -115,7 +115,6 @@
       <x-m> -0.190 </x-m>
       <y-m>  0.089 </y-m>
       <z-m>  0.406 </z-m>
-<!-- <pitch-deg> -5 </pitch-deg> -->
     </offsets>
   </model>
   
@@ -139,7 +138,7 @@
   
   <model>
     <name>vor</name>
-    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/winter-ball/ball.xml</path>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/turn/turn.xml</path>
     <offsets>
       <x-m> -0.168 </x-m>
       <y-m> -0.030 </y-m>
@@ -169,7 +168,7 @@
   <model>
     <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/rpm/rpm-1.xml</path>
     <offsets>
-      <x-m> -0.168 </x-m>
+      <x-m> -0.166 </x-m>
       <y-m>  0.070 </y-m>
       <z-m>  0.220 </z-m>
     </offsets>
@@ -178,16 +177,16 @@
   <model>
     <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/rpm/rpm-2.xml</path>
     <offsets>
-      <x-m> -0.168 </x-m>
+      <x-m> -0.166 </x-m>
       <y-m>  0.125 </y-m>
       <z-m>  0.220 </z-m>
     </offsets>
   </model>
   
   <model>
-    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/egt/egt.xml</path>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/egt/egt1.xml</path>
     <offsets>
-      <x-m> -0.168 </x-m>
+      <x-m> -0.166 </x-m>
       <y-m>  0.180 </y-m>
       <z-m>  0.220 </z-m>
     </offsets>
@@ -196,7 +195,7 @@
   <model>
     <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/egt/egt2.xml</path>
     <offsets>
-      <x-m> -0.168 </x-m>
+      <x-m> -0.166 </x-m>
       <y-m>  0.214 </y-m>
       <z-m>  0.220 </z-m>
     </offsets>
@@ -230,4 +229,3 @@
   </model>
   
 </PropertyList>
-
