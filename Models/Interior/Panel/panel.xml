@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+    <object-name>leftpanel</object-name>
+    <object-name>rightpanel</object-name>
+ 
+    <!-- Objets transparents -->
+  </animation>
+  
+  <!-- sticks and pedals -->
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/Yoke/stick.xml</path>
+    <offsets>
+      <x-m> -0.145 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.400 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/Pedals/pedals.xml</path>
+    <offsets>
+      <x-m> -0.27 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m> -0.30 </z-m>
+    </offsets>
+  </model> 
+  
+  <!-- instumentation -->
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/Radar/radar.xml</path>
+    <offsets>
+      <x-m> -0.152 </x-m>
+      <y-m>  0.049 </y-m>
+      <z-m>  0.152 </z-m>
+      <pitch-deg> -10 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- NAV LIGHT -->
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
+    <offsets>
+      <x-m> -0.167 </x-m>
+      <y-m> -0.145 </y-m>
+      <z-m>  0.388 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> -0.168 </x-m>
+      <y-m>  0.100 </y-m>
+      <z-m>  0.295 </z-m>
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <name>il</name>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/adf/rmi.xml</path>
+    <offsets>
+      <x-m> -0.168 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.365 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/g/gmeter.xml</path>
+    <offsets>
+      <x-m> -0.168 </x-m>
+      <y-m> -0.020 </y-m>
+      <z-m>  0.430 </z-m>
+    </offsets>
+  </model>
+  
+   <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m> -0.168 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.290 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/ralt/ralt.xml</path>
+    <offsets>
+      <x-m> -0.168 </x-m>
+      <y-m> -0.075 </y-m>
+      <z-m>  0.290 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> -0.168 </x-m>
+      <y-m> -0.075 </y-m>
+      <z-m>  0.365 </z-m>
+    </offsets>
+  </model>
+  
+  <model>  
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/mag-compass/mag-compass.xml</path>
+    <offsets>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.089 </y-m>
+      <z-m>  0.406 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/Fuel/fuel.xml</path>
+    <offsets>
+      <x-m> -0.168 </x-m>
+      <y-m>  0.070 </y-m>
+      <z-m>  0.370 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/Fuel/fuel1.xml</path>
+    <offsets>
+      <x-m> -0.168 </x-m>
+      <y-m>  0.125 </y-m>
+      <z-m>  0.370 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <name>vor</name>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m> -0.168 </x-m>
+      <y-m> -0.030 </y-m>
+      <z-m>  0.200 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <name>VSI</name>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> -0.168 </x-m>
+      <y-m> -0.110 </y-m>
+      <z-m>  0.200 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/flightindicator/flight-indicator.xml</path>
+    <offsets>
+      <x-m> -0.165 </x-m>
+      <y-m> -0.200 </y-m>
+      <z-m>  0.180 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/rpm/rpm-1.xml</path>
+    <offsets>
+      <x-m> -0.166 </x-m>
+      <y-m>  0.070 </y-m>
+      <z-m>  0.220 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/rpm/rpm-2.xml</path>
+    <offsets>
+      <x-m> -0.166 </x-m>
+      <y-m>  0.125 </y-m>
+      <z-m>  0.220 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/egt/egt1.xml</path>
+    <offsets>
+      <x-m> -0.166 </x-m>
+      <y-m>  0.180 </y-m>
+      <z-m>  0.220 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/egt/egt2.xml</path>
+    <offsets>
+      <x-m> -0.166 </x-m>
+      <y-m>  0.214 </y-m>
+      <z-m>  0.220 </z-m>
+    </offsets>
+  </model>
+ 
+ <model>
+     <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/oil/oil-1.xml</path>
+    <offsets>
+      <x-m> -0.168 </x-m>
+      <y-m>  0.180 </y-m>
+      <z-m>  0.180 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/oil/oil-2.xml</path>
+    <offsets>
+      <x-m> -0.168 </x-m>
+      <y-m>  0.214 </y-m>
+      <z-m>  0.180 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/Instruments/Fuelflow/FF.xml</path>
+    <offsets>
+      <x-m> -0.168 </x-m>
+      <y-m>  0.250 </y-m>
+      <z-m>  0.180 </z-m>
+    </offsets>
+  </model>
+  
+</PropertyList>

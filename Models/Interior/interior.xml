@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttour</object-name>
+    <object-name>intcanopyAG</object-name>
+    <object-name>intcanopyAD</object-name>
+    <object-name>intcanopyBG</object-name>
+    <object-name>intcanopyBD</object-name>
+    <object-name>separation</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+    <object-name>intvitreAG</object-name>
+    <object-name>intvitreAD</object-name>
+    <object-name>intvitreBG</object-name>
+    <object-name>intvitreBD</object-name>
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Avro-Arrow/Models/Effects/Glass/glass</inherits-from>
+    <object-name>intvitres</object-name>
+    <object-name>intvitreAG</object-name>
+    <object-name>intvitreAD</object-name>
+    <object-name>intvitreBG</object-name>
+    <object-name>intvitreBD</object-name>
+  </effect>
+  
+  <!-- Siege pilote -->
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -5.326 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.079 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -5.319 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.038 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Siege copilote -->
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -3.926 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.079 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Copilote -->
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -3.916 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.038 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Planche de bord -->
+  <model>
+    <path>Aircraft/Avro-Arrow/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -5.998 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.223 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Canopy -->
+  <animation>
+    <name>IntAvantGauche</name>
+    <object-name>intcanopyAG</object-name>
+    <object-name>intvitreAG</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>IntAvantGauche</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntAvantGauche</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 45 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -5.536 </x1-m>
+      <y1-m> -0.457 </y1-m>
+      <z1-m>  0.070 </z1-m>
+      <x2-m> -5.183 </x2-m>
+      <y2-m> -0.474 </y2-m>
+      <z2-m>  0.095 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>IntAvantDroite</name>
+    <object-name>intcanopyAD</object-name>
+    <object-name>intvitreAD</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>IntAvantDroite</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntAvantDroite</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -45 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -5.536 </x1-m>
+      <y1-m>  0.457 </y1-m>
+      <z1-m>  0.070 </z1-m>
+      <x2-m> -5.183 </x2-m>
+      <y2-m>  0.474 </y2-m>
+      <z2-m>  0.095 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>IntArriereGauche</name>
+    <object-name>intcanopyBG</object-name>
+    <object-name>intvitreBG</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>IntArriereGauche</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntArriereGauche</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 45 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -4.660 </x1-m>
+      <y1-m> -0.476 </y1-m>
+      <z1-m>  0.130 </z1-m>
+      <x2-m> -3.857 </x2-m>
+      <y2-m> -0.467 </y2-m>
+      <z2-m>  0.184 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>IntArriereDroite</name>
+    <object-name>intcanopyBD</object-name>
+    <object-name>intvitreBD</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>IntArriereDroite</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntArriereDroite</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -45 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -4.660 </x1-m>
+      <y1-m>  0.476 </y1-m>
+      <z1-m>  0.130 </z1-m>
+      <x2-m> -3.857 </x2-m>
+      <y2-m>  0.467 </y2-m>
+      <z2-m>  0.184 </z2-m>
+    </axis>
+  </animation>
+
+</PropertyList>
