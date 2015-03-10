@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -20,10 +20,7 @@
     <type>select</type>
     <object-name>shadow</object-name>
     <condition>
-      <and>
-        <not><property>sim/freeze/replay-state</property></not>
-        <not><property>sim/rendering/shadows/enabled</property></not>
-      </and>
+      <not><property>sim/freeze/replay-state</property></not>
     </condition>
   </animation>
 
@@ -58,7 +55,6 @@
   <animation>
    <type>translate</type>
    <object-name>shadow</object-name>
-   <!-- /position/gear-agl-m -->
    <property>sim/multiplay/generic/float[2]</property>
    <factor> -1 </factor>
    <axis>
@@ -69,3 +65,4 @@
  </animation>
 
 </PropertyList>
+

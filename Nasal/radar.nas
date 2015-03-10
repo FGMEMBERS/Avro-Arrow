@@ -137,6 +137,7 @@ boreSightLock = func {
    settimer(boreSightLock, 0.2);
 }
 
+
 setlistener("ai/models/model-added", MPjoin);
 setlistener("ai/models/model-removed", MPleave);
 settimer(MPradarProperties,1.0);

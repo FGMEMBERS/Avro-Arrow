@@ -1,31 +1,29 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
-  
+
   <particlesystem>
     <name>tyre-smoke-n</name>
     <texture>smoke.png</texture>
     <emissive>false</emissive>
     <lighting>false</lighting>
-    
+
     <condition>
       <and>
-        <!-- /gear/gear[0]/wow -->
-        <property>sim/multiplay/generic/float[10]</property>
+        <property>/gear/gear[0]/wow</property>
         <greater-than>
-          <!-- /gear/gear[0]/rollspeed-ms -->
-          <property>sim/multiplay/generic/float[13]</property>
-          <value>5</value>
+          <property>/gear/gear[0]/rollspeed-ms</property>
+          <value>15</value>
         </greater-than>
       </and>
     </condition>
-    
+
     <attach>world</attach>
-    
+
     <placer>
       <type>point</type>
     </placer>
-    
+
     <shooter>
       <theta-min-deg>  45 </theta-min-deg>
       <theta-max-deg>  85 </theta-max-deg>
@@ -44,16 +42,16 @@
         <z-min-deg-sec> -15 </z-min-deg-sec>
       </rotation-speed>
     </shooter>
-    
+
     <counter>
       <particles-per-sec>
         <value>150</value>
         <spread>0</spread>
       </particles-per-sec>
     </counter>
-    
+
     <align>billboard</align>
-    
+
     <particle>
       <start>
         <color>
@@ -66,10 +64,10 @@
       </start>
       <end>
         <color>
-          <red><value>   1.00 </value></red>
-          <green><value> 1.00 </value></green>
-          <blue><value>  1.00 </value></blue>
-          <alpha><value> 0.02 </value></alpha>
+          <red><value>   1.000 </value></red>
+          <green><value> 1.000 </value></green>
+          <blue><value>  1.000 </value></blue>
+          <alpha><value> 0.020 </value></alpha>
         </color>
         <size><value> 3 </value></size>
       </end>
@@ -77,13 +75,13 @@
       <mass-kg>  0.025 </mass-kg>
       <radius-m> 0.175 </radius-m>
     </particle>
-    
+
     <program>
       <fluid>   air  </fluid>
       <gravity> true </gravity>
       <wind>    true </wind>
     </program>
-    
+
   </particlesystem>
-  
+
 </PropertyList>

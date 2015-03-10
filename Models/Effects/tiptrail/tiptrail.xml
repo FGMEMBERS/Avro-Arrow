@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -78,14 +78,10 @@
           <red><value>   1.0 </value></red>
           <green><value> 1.0 </value></green>
           <blue><value>  1.0 </value></blue>
-          <alpha>          
-            <property>/accelerations/pilot/z-accel-fps_sec</property>
-            <factor>-0.0015</factor>
-          </alpha>
+          <alpha><value> 0.1 </value></alpha>
         </color>
         <size>
-          <property>/accelerations/pilot/z-accel-fps_sec</property>
-          <factor>-0.0003</factor>
+          <value>0.10</value>
         </size>
       </start>
 
@@ -94,14 +90,10 @@
          <red><value>   1.00 </value></red>
          <green><value> 1.00 </value></green>
          <blue><value>  1.00 </value></blue>
-         <alpha>          
-           <property>/accelerations/pilot/z-accel-fps_sec</property>
-           <factor>-0.00015</factor>
-         </alpha>
+         <alpha><value> 0.08 </value></alpha>
        </color>
        <size>
-          <property>/accelerations/pilot/z-accel-fps_sec</property>
-          <factor>-0.0009</factor>
+         <value>1.0</value>
        </size>
       </end>
 
@@ -113,6 +105,11 @@
       <radius-m>0.1</radius-m>
     </particle>
 
+    <program>
+      <fluid>   air  </fluid>
+      <gravity> true </gravity>
+      <wind>    true </wind>
+    </program>
 
   </particlesystem>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -13,18 +13,20 @@
     <condition>
       <and>
         <greater-than>
-          <!-- /engines/engine[1]/n2 -->
-          <property>sim/multiplay/generic/float[7]</property>
-          <value>75</value>
+          <property>/engines/engine[1]/n2</property>
+          <value>50</value>
         </greater-than>
         <greater-than>
-          <!-- /position/altitude-ft -->
-          <property>sim/multiplay/generic/float[3]</property>
-          <value>3000</value>
+          <property>/position/altitude-ft</property>
+          <value>23000</value>
         </greater-than>
+		<greater-than>
+     <property>velocities/airspeed-kt</property>
+     <value>100</value>
+	 </greater-than>
       </and>
     </condition>
-    
+
     <attach>world</attach>
 
     <placer>
@@ -74,10 +76,10 @@
 
       <end>
         <color>
-          <red><value>   1 </value></red>
-          <green><value> 1 </value></green>
-          <blue><value>  1 </value></blue>
-          <alpha><value> 1 </value></alpha>
+          <red><value>   1.0 </value></red>
+          <green><value> 1.0 </value></green>
+          <blue><value>  1.0 </value></blue>
+          <alpha><value> 1.0 </value></alpha>
         </color>
         <size>
           <value>4</value>
@@ -101,3 +103,4 @@
   </particlesystem>
 
 </PropertyList>
+

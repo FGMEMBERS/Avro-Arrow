@@ -1,8 +1,14 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
   <path>interior.ac</path>
+  
+  <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>100</max-m>
+    </animation>
 
   <animation>
     <!-- Objets opaques -->
@@ -22,15 +28,26 @@
     <object-name>intvitreBD</object-name>
   </animation>
 
-  <effect>
-    <inherits-from>Aircraft/Avro-Arrow/Models/Effects/Glass/glass</inherits-from>
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
     <object-name>intvitres</object-name>
     <object-name>intvitreAG</object-name>
     <object-name>intvitreAD</object-name>
     <object-name>intvitreBG</object-name>
     <object-name>intvitreBD</object-name>
-  </effect>
-  
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+    <object-name>intvitreAG</object-name>
+    <object-name>intvitreAD</object-name>
+    <object-name>intvitreBG</object-name>
+    <object-name>intvitreBD</object-name>
+  </animation>
+
   <!-- Siege pilote -->
   <model>
     <path>Aircraft/Avro-Arrow/Models/Interior/seats/seat.xml</path>
@@ -61,7 +78,7 @@
     </offsets>
   </model>
 
-  <!-- Copilote -->
+  <!-- Pilote -->
   <model>
     <path>Aircraft/Avro-Arrow/Models/Pilot/pilot.xml</path>
     <offsets>
@@ -89,23 +106,9 @@
   </animation>
 
   <animation>
-    <type>pick</type>
-    <object-name>IntAvantGauche</object-name>
-    <visible>true</visible>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>nasal</command>
-        <script>doors.crew.toggle();</script>
-      </binding>
-    </action>
-  </animation>
-  
-  <animation>
     <type>rotate</type>
     <object-name>IntAvantGauche</object-name>
-    <property>sim/model/door-positions/crew/position-norm</property>
+    <property>instrumentation/doors/crew/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
       <entry><ind> 1 </ind><dep> 45 </dep></entry>
@@ -127,23 +130,9 @@
   </animation>
 
   <animation>
-    <type>pick</type>
-    <object-name>IntAvantDroite</object-name>
-    <visible>true</visible>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>nasal</command>
-        <script>doors.crew.toggle();</script>
-      </binding>
-    </action>
-  </animation>
-  
-  <animation>
     <type>rotate</type>
     <object-name>IntAvantDroite</object-name>
-    <property>sim/model/door-positions/crew/position-norm</property>
+    <property>instrumentation/doors/crew/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>   0 </dep></entry>
       <entry><ind> 1 </ind><dep> -45 </dep></entry>
@@ -165,23 +154,9 @@
   </animation>
 
   <animation>
-    <type>pick</type>
-    <object-name>IntArriereGauche</object-name>
-    <visible>true</visible>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>nasal</command>
-        <script>doors.passenger.toggle();</script>
-      </binding>
-    </action>
-  </animation>
-  
-  <animation>
     <type>rotate</type>
     <object-name>IntArriereGauche</object-name>
-    <property>sim/model/door-positions/passenger/position-norm</property>
+    <property>instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
       <entry><ind> 1 </ind><dep> 45 </dep></entry>
@@ -203,23 +178,9 @@
   </animation>
 
   <animation>
-    <type>pick</type>
-    <object-name>IntArriereDroite</object-name>
-    <visible>true</visible>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>nasal</command>
-        <script>doors.passenger.toggle();</script>
-      </binding>
-    </action>
-  </animation>
-  
-  <animation>
     <type>rotate</type>
     <object-name>IntArriereDroite</object-name>
-    <property>sim/model/door-positions/passenger/position-norm</property>
+    <property>instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>   0 </dep></entry>
       <entry><ind> 1 </ind><dep> -45 </dep></entry>
@@ -235,3 +196,4 @@
   </animation>
 
 </PropertyList>
+

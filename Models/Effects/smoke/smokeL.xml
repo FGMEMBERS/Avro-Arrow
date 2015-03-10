@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -12,13 +12,15 @@
     <condition>
       <and>
         <greater-than>
-          <!-- /engines/engine[0]/n2 -->
-          <property>sim/multiplay/generic/float[5]</property>
+          <property>/engines/engine[0]/n2</property>
           <value>75</value>
         </greater-than>
+		<greater-than>
+     <property>velocities/airspeed-kt</property>
+     <value>100</value>
+	 </greater-than>
         <less-than>
-          <!-- /position/altitude-ft -->
-          <property>sim/multiplay/generic/float[3]</property>
+          <property>/position/altitude-ft</property>
           <value>3000</value>
         </less-than>
       </and>
@@ -36,8 +38,7 @@
       <phi-min-deg>-1.5</phi-min-deg>
       <phi-max-deg>1.5</phi-max-deg>
       <speed-mps>
-        <!-- /engines/engine[0]/n1 -->
-        <property>sim/multiplay/generic/float[4]</property>
+        <property>engines/engine/n1</property>
         <factor>5</factor>
       </speed-mps>
       <rotation-speed>
@@ -52,8 +53,7 @@
 
     <counter>
       <particles-per-sec>
-        <!-- /engines/engine[0]/n1 -->
-        <property>sim/multiplay/generic/float[4]</property>
+        <property>engines/engine/n1</property>
         <factor>1</factor>
         <spread>20</spread>
       </particles-per-sec>

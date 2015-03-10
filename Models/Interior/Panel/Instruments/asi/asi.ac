@@ -1,6 +1,6 @@
 AC3Db
-MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "transparent" rgb 1 1 1 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 64 trans 0.85
+MATERIAL "DefaultWhite" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 50 trans 0
+MATERIAL "transparent" rgb 0.9 0.9 0.9 amb 0 0 0 emis 0 0 0 spec 1 1 1 shi 50 trans 0.85
 OBJECT world
 kids 7
 OBJECT poly
@@ -8,9 +8,9 @@ name "face"
 loc 0.001377 0 -0
 data 4
 face
-texture "asi.png"
-texrep 1.000000 1.000000
-crease 180.000005
+texture "colors.png"
+texrep 1 1
+crease 30.000001
 numvert 33
 0 -0.000001 -0
 0 0.027348 -0.018273
@@ -244,9 +244,9 @@ name "fond"
 loc 0 0 -0
 data 4
 fond
-texture "asi.png"
-texrep 1.000000 1.000000
-crease 180.000005
+texture "colors.png"
+texrep 1 1
+crease 45.000001
 numvert 48
 0.004071 0.017945 -0.026811
 0.004071 0.00632 -0.031638
@@ -575,9 +575,9 @@ name "hundredths"
 loc 0.001577 0.002177 -0.021049
 data 10
 hundredths
-texture "asi.png"
-texrep 1.000000 1.000000
-crease 180.000005
+texture "colors.png"
+texrep 1 1
+crease 45.000001
 numvert 4
 0.000008 0.007868 -0.00249
 -0.000008 -0.007868 -0.00249
@@ -597,9 +597,9 @@ name "needle"
 loc 0.002058 0.012126 -0.000034
 data 6
 needle
-texture "asi.png"
-texrep 1.000000 1.000000
-crease 180.000005
+texture "colors.png"
+texrep 1 1
+crease 45.000001
 numvert 14
 0.00029 -0.013342 -0.001271
 0.00029 -0.013342 0.001271
@@ -691,9 +691,9 @@ name "ones"
 loc 0.001577 0.002187 -0.009362
 data 4
 ones
-texture "asi.png"
-texrep 1.000000 1.000000
-crease 180.000005
+texture "colors.png"
+texrep 1 1
+crease 45.000001
 numvert 4
 0.000008 0.007868 -0.00249
 -0.000008 -0.007868 -0.00249
@@ -713,9 +713,9 @@ name "tenths"
 loc 0.001577 0.002187 -0.01543
 data 6
 tenths
-texture "asi.png"
-texrep 1.000000 1.000000
-crease 180.000005
+texture "colors.png"
+texrep 1 1
+crease 45.000001
 numvert 4
 -0.000008 -0.007868 0.00249
 0.000008 0.007868 0.00249
@@ -735,7 +735,8 @@ name "vitre"
 loc 0.001377 0 -0
 data 5
 vitre
-crease 180.000005
+texrep 1 1
+crease 30.000001
 numvert 33
 0.001979 -0.000001 -0
 0.001979 0.027348 -0.018273
