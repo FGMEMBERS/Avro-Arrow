@@ -8,6 +8,19 @@
     <author>BARANGER Emmanuel (3D/FDM), StuartC (FDM/Panel), N-SCOT ( Liveries )</author>
     <flight-model>yasim</flight-model>
     <aero>arrow-yasim</aero>
+
+    <tags>
+      <tag>avro</tag>
+      <tag>high-wing</tag>
+      <tag>delta-wing</tag>
+      <tag>tricycle</tag>
+      <tag>retractable-gear</tag>
+      <tag>twin-engine</tag>
+      <tag>jet</tag>
+      <tag>afterburner</tag>
+      <tag>fighter</tag>
+      <tag>1950s</tag>
+    </tags>
     
     <rating>
       <FDM type="int">     2 </FDM>
